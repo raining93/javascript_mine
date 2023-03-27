@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .note{
+        width: 50%;
+        min-height: 100px;
+        background-color: lightgreen;
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+  <p>변수
+   var : 함수범위, 혹은 전역범위의 변수
+         호이스팅이 일어남 
+         재선언이 가능하고, 업데이트가 가능함 
+   let : 블록범위에서만 사용가능 
+         재선언은 불가능, 업데이트는 가능함 
+         서로 다른 범위에서 부른다면, 같은 변수를 따로 사용가능    
+         초기화되지 않음
+   const : 상수값, 블록범위에서만 사용가능 
+           재선언, 업데이트 모두 불가능
+
+   scope :  메모리에 변수가 올라가고 내려오는 기준 또는 범위(함수레벨, 블록레벨)
+
+
+  </p>
+  <script type="text/javascript">
+    
+    // 선언하지 않은 hello 출력하기
+    // hello 변수를 선언하지 않아도 콘솔에 찍히는 것을 알 수 있음 
+    // 개발자 모드 눌러서 콘솔 확인하기 
+    hello = 'hello world';
+    console.dir(hello);
+
+    // hello 선언
+    var hello;
+    let letHello;
+    const constHello= 'hello const';
+
+    // const는 상수이기 때문에 초기화 이후 수정불가
+    // 42번줄의 constHello의 값을 hi const로 수정이 안됨
+    // const constHello = 'hi const';
+
+    // 함수 실행
+    alertHello();
+
+    // 함수 선언
+    function alertHello(){
+      console.dir('function hello');
+    }
+
+    // 함수 선언2 
+    alertGoodBye();
+
+    // 함수 선언
+    function alertGoodBye(){
+      console.dir('function goodBye');
+    }
+
+    // 함수 호출이 헷갈리면, 함수 선언 후에 하기 
+    function testVariableScope(){
+      // let, const는 블록레벨스코프라 블록이 닫히는 순간 사용 불가4
+
+      if(true){
+        var VarTest = 'if문 안에 선언한 var'
+        let letTest = 'if 문 안에 선언한 let'
+        const constTest = 'if문 안에 선언한 const'
+        // if문 조건식이 참이면 안에 실행문을 실행함
+        
+        // if(조건문){
+        // 실행문
+        // }
+
+      }
+      
+      console.dir(VarTest);
+      // let, const는 if문 밖의 블록에서 사용할 수 없다. 블록레벨스코프 변수이기 때문에.
+      //console.dir(letTest);
+      //console.dir(constTest);
+    }
+
+    // 함수 호출
+    testVariableScope();
+
+    // window 전역객체
+    // window : js에서 사용하는 변수, 함수, 객체를 속성으로 관리하고 js 프로그래밍에 피룡한 객체나 함수를 제공해주는 전역객체 
+    //         * 전역객체 : 브라우저가 종료될 때까지 메모리에서 내려오지 않는 객체 
+    //                      script 바로 아래에서 선언한 변수들 
+    // 전역에서 var로 선언한 변수는 전역객체인 window에 속성으로 등록이 된다. 
+    // 반면에 let, const로 선언한 변수는 전역객체인 window에 등록되지 않는다. 
+
+    var var1 ='전역에서 선언한 var1변수';
+        let let1='전역에서 선언한 let1변수';
+        const const1 ='전역에서 선언한 coonst1변수';
+        console.dir(window);
+    // console에서 확인해보면 var1은 보이지만 let, const는 확인할 수 없음
+    // 따라서 window 객체에 var는 등록이 되지만 let,const는 안됨
+
+
+  </script>
+  
+</body>
+</html>
