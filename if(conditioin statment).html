@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <pre>
+    if 뒤의 괄호 안에는 조건이 오고, 조건이 될 수 있는 값은 boolean이다. 
+    Boolean값이 true라면 if문을 실행한다. 
+
+  if(true){
+    alert('result : true')
+  }
+  얘는 출력됨
+
+  if(false){
+    alert('result : true')
+  }
+  얘는 출력안됨
+
+  </pre>
+
+  <script>
+    // 1의 조건이 참이면 1을 출력 아니면 아래 코드로 내려감 
+  if(false){
+    alert(1);
+    // 2의 조건이 참이면 2를 출력 아니면 아래 코드로 내려감 
+  }else if(true){
+    alert(2);
+  }else{
+    alert(3);
+    // 위의 코드의 참, 거짓여부와 상관없이 456을 출력
+ } alert(456);
+
+ 
+ var a= 1;
+
+ if(a===1){
+  alert(1);
+ }
+
+ // 그냥 프롬프터에 당신의 나이는? 하고 나이를 입력하면 끝
+ prompt("당신의 나이는?");
+
+ // 프롬프터에 당신의 나이는? 하고 나오고, 나이를 입력하면 확인하는 프롬프터창이 하나 더 나오는 것
+ alert(prompt("당신의 나이는?"));
+
+ 
+ 
+
+  </script>
+</body>
+</html>

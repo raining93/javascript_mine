@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>== 동등 연산자(equal operator)
+     좌항과 우항을 비교해서 서로 값이 같다면 true, 다르다면 false이다.
+
+     a=1 vs a==1 은 같을까?
+     다르다.
+
+     첫번째, a=1은 좌항에 우항의 값을 넣어 대입한다는 의미
+     두번째, a==1은 a와 1의 값이 같다면, true, 다르다면 false 의 값을 내는 동등비교의 의미 
+
+     === 일치 연산자(strict equal operator) 엄격한 일치 연산자 정도
+
+  </p>
+  <script>
+  alert(1==2); // fasle
+  alert(1==1); // true
+  alert(1==="1") // false 숫자1과 문자 1은 다르다. (형식이 다르므로)
+  alert(1=="1") // true ==은 서로 다른 숫자와 문자를 비교하더라도, 실질적으로 같은 의미를 나타내는 것이면 true를 반환한다. 
+  alert(true == 1); // true true는 1을 참으로 간주하고, 나머지 숫자는 false로 간주한다. 
+  alert(0===-0); // true 중간에 있는 값이므로 true
+  // 이 사이트 들어가서 헷갈리는 거 확인하기 
+  // https://dorey.github.io/JavaScript-Equality-Table/
+
+
+
+
+
+
+
+
+
+</script>
+  
+</body>
+</html>
