@@ -8,16 +8,43 @@
 </head>
 <body>
   <script>
-  var id= prompt("ID를 입력하세요.")
-  if(id == 'raining'){
-    var password = prompt('비밀번호를 입력해주세요. ');
-    if(password == '1234'){
-      alert('로그인 되었습니다. ')
+  // var id= prompt("ID를 입력하세요.")
+  // if(id == 'raining'){
+  //   var password = prompt('비밀번호를 . ');
+  //   if(password == '1234'){
+  //     alert('로그인 되었습니다. ')
+  //   }else{
+  //     alert('비밀번호가 일치하지 않습니다.')
+  //   }
+  // }else{
+  //   alert('아이디가 일치하지 않습니다. ');
+  // }
+
+  // && 연산자 사용하기 
+  true && true // true
+  true && false // false
+  false && true // false
+  false && false // false
+
+  var id= prompt("ID를 입력하세요.");
+  var password = prompt("비밀번호를 입력하세요.");
+  if(id === 'raining' && password === '1234'){
+      alert('로그인 되었습니다.'+id+'님 반갑습니다.')
     }else{
-      alert('비밀번호가 일치하지 않습니다.')
-    }
-  }else{
-    alert('아이디가 일치하지 않습니다. ');
+    alert('아이디나 비밀번호가 일치하지 않습니다. ');
+  }
+
+  // || 연산자 사용하기 
+  true || true // true
+  true || false // true
+  false || true // true
+  false && false // false
+
+  var id= prompt("ID를 입력하세요.");
+  if(id === 'raining' || id === '1234' || id === 'q1w2e3'){
+      alert('로그인 되었습니다.'+id+'님 반갑습니다.')
+    }else{
+    alert('아이디나 비밀번호가 일치하지 않습니다. ');
   }
 </script>
 </body>
